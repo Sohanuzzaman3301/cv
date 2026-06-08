@@ -1,0 +1,15 @@
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+*.gz
+*.idx
+*.lof
+*.lot
+*.blg
+*.bbl
+cv_cyber.pdf
+.DS_Store
