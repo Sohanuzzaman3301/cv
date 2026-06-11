@@ -1,0 +1,221 @@
+%-------------------------
+% Resume in Latex (Improved Project Entry)
+% Author : Jake Gutierrez (original) / Edited by OpenCode
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\footskip}{12pt}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={} ]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \textsc{MD SOHANUZZAMAN SHANTO}} \\
+    \vspace{6pt}
+    {\small +8801774786111 $|$ \href{mailto:md.sohanuzzaman@proton.me}{\underline{md.sohanuzzaman@proton.me}} $|$ \\
+    \href{https://linkedin.com/in/sohanuzzaman3301}{\underline{linkedin.com/in/sohanuzzaman3301}} $|$ \\
+    \href{https://github.com/sohanuzzaman3301}{\underline{github.com/sohanuzzaman3301}} $|$ \\
+    \href{https://sohanuzzaman3301.github.io}{\underline{sohanuzzaman3301.github.io}}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Wuhan Institute of Technology}{Wuhan, China}
+{Bachelor of Engineering in Computer Science and Technology}{Feb. 2022 -- Jan 2026}
+\resumeItemListStart
+\resumeItem{Grade: 84\% | Awards: First Class Scholarship for Academic Excellence (Ranked 1st in batch, 2025)}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications \& Licenses}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{SOC Level 1 Certificate}{Mar. 2026}
+{TryHackMe}{}
+\resumeItemListStart
+\resumeItem{Performed security monitoring, alert triage, incident investigation, and threat detection in simulated SOC environments.}
+\resumeItem{Utilized Splunk, Elastic Stack (ELK), Wireshark, Zeek, Sysmon, and Wazuh for log analysis, network monitoring, and endpoint investigations.}
+\resumeItem{\small\href{https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-NXIMKAYVCK.pdf}{TryHackMe certificate}}
+\resumeItemListEnd
+
+\resumeSubheading
+{Google Cybersecurity Professional Certificate}{Sep. 2025}
+{Google / Coursera}{}
+\resumeItemListStart
+\resumeItem{SIEM monitoring, incident response, network traffic analysis, Python automation, and NIST security frameworks.}
+\resumeItem{\small\href{https://www.credly.com/badges/ed2ab68a-c056-4cd1-a293-82a4d2422a44/public_url}{Credly badge}}
+\resumeItemListEnd
+
+\resumeSubheading
+{Google IT Support Professional Certificate}{Nov. 2025}
+{Google / Coursera}{}
+\resumeItemListStart
+\resumeItem{System administration, Active Directory, networking, and IT infrastructure troubleshooting.}
+\resumeItem{\small\href{https://www.credly.com/badges/98cc58ec-2e39-4863-938f-b5c895a6dcb8/public_url}{Credly badge}}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {Home Lab — SOC Detection \& Incident Response (Independent)}{2025 -- 2026}
+          \resumeItemListStart
+            \resumeItem{Built a production-like SOC home lab: deployed Splunk Enterprise (indexers, search head), Elastic Stack for historical storage, a Zeek+Suricata network sensor, and Windows Domain (AD) + instrumented endpoints (Sysmon, Winlogbeat). Collected: Windows Event Logs, Sysmon (EventID 1/3/7/11/12), Zeek conn/http/dns logs, and PCAPs for end-to-end visibility.}
+            \resumeItem{Detection engineering: authored and validated actionable detection rules in Splunk SPL and Microsoft Sentinel KQL, and translated detections to Sigma for portability. Example Splunk SPL (SMB lateral movement): \texttt{index=wineventlog EventCode=4688 CommandLine="*\\psexec.exe*" | stats count by Computer,User,CommandLine}.}
+            \resumeItem{Network triage workflow: extracted Zeek HTTP logs, used Wireshark to inspect PCAPs and identify beaconing (periodic HTTP POSTs). Applied Wireshark filters for focused analysis: \texttt{http.request.method == "POST" and tcp.len > 0} and used Zeek scripts to extract domains and user-agents for IOC creation.}
+            \resumeItem{Endpoint hunt \& pivot: correlated Splunk process creation (Sysmon EventID 1) with network connections (Sysmon EventID 3) to map parent-child relationships, identified anomalous rundll32 and cmd invocations, and traced origin to phishing-delivered payload.}
+            \resumeItem{ATT\&CK mapping \& remediation: mapped observed techniques to MITRE ATT\&CK (T1071.001 — Web Protocols, T1021.002 — SMB/Windows Admin Shares, T1547.001 — Service Persistence). Produced a remediation runbook with containment steps (host isolation, service disablement, credential reset), IOC blocklists (IPs/domains), and suggested firewall/IDS rules for prevention.}
+            \resumeItem{Deliverables: produced a detection pack comprising 6 Splunk saved searches, 4 KQL analytics rules, 3 Sigma rules, Zeek log parsers, example YARA rules for identified malware, and a one-page incident report template mapping findings to ATT\&CK techniques for quick stakeholder briefing.}
+            \resumeItem{Verification \& automation: replayed PCAPs with tcpreplay to validate detections, automated log ingestion via Winlogbeat/Beats -> ELK, and scripted recurring validation using Python to assert detection coverage against a test corpus of benign and malicious traces.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {Password Strength Meter $|$ \emph{Astro, JavaScript, CSS}}{2024}
+          \resumeItemListStart
+            \resumeItem{Client-side password strength estimator and leak checker that estimates entropy and likely crack times using a zxcvbn-inspired approach.}
+            \resumeItem{Performs k-anonymity "Have I Been Pwned" leak checks entirely from the browser so plaintext passwords are never transmitted; includes CI for deployment to Cloudflare Pages.}
+          \resumeItemListEnd
+      \begin{itemize}[leftmargin=0.15in, label={}]
+      \item \small GitHub: \href{https://github.com/Sohanuzzaman3301/password-strengh-meter}{https://github.com/Sohanuzzaman3301/password-strengh-meter}
+      \item \small Live: \url{https://dd3b2174.password-strength-meter.pages.dev/}
+      \end{itemize}
+    \resumeSubHeadingListEnd
+
+%-----------RESEARCH EXPERIENCE-----------
+\section{Research Experience}
+    \resumeSubHeadingListStart
+      \resumeSubheading
+          {Undergraduate Thesis: Explainable PE Malware Detection using Ensemble Learning}{Wuhan Institute of Technology}
+          {EMBER2024 dataset (1M+ PE samples); ensemble stacking and SHAP-based explainability for malware classification}{2024 -- 2026}
+          \resumeItemListStart
+            \resumeItem{Developed an ensemble stacking pipeline for PE malware classification trained on the EMBER2024 dataset (1M+ samples).}
+            \resumeItem{Applied SHAP to produce model-agnostic explanations and feature-level attributions to improve analyst interpretability and debugging.}
+          \resumeItemListEnd
+      \begin{itemize}[leftmargin=0.15in, label={}]
+      \item \small GitHub: \href{https://github.com/Sohanuzzaman3301/pe-malware-ensemble/}{https://github.com/Sohanuzzaman3301/pe-malware-ensemble/}
+      \end{itemize}
+    \resumeSubHeadingListEnd
+
+%-----------VIRTUAL EXPERIENCE & PROJECTS-----------
+\section{Virtual Experience \& Projects}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Mastercard Cybersecurity Job Simulation | Forage}{June 2026}
+{Remote}{}
+\resumeItemListStart
+\resumeItem{Simulated the role of a Mastercard Security Analyst to design and launch realistic, company-wide phishing simulation drills.}
+\resumeItem{Analyzed employee vulnerability data to identify high-risk departments and security gaps across the enterprise.}
+\resumeItem{Developed targeted corporate security awareness training materials based on data insights to mitigate future phishing risks.}
+\resumeItem{\small\href{https://tinyurl.com/mastercardExp}{Forage certificate}}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small
+\item{
+\textbf{Security}{: Security Monitoring, Threat Detection, Incident Response, Detection Engineering, Network Forensics, Malware Analysis} \\
+
+\textbf{Security Tools}{: Splunk (SPL, saved searches), Elastic Stack (ELK), Zeek, Suricata, Wireshark/tshark, Sysmon, Winlogbeat, Wazuh, YARA, Sigma} \\
+
+\textbf{Query Languages}{: Splunk SPL, KQL (Microsoft Sentinel), SQL} \\
+
+\textbf{Operating Systems}{: Linux, Windows, Active Directory Administration} \\
+
+\textbf{Programming}{: Python, Bash, SQL} \\
+
+\textbf{Developer Tools}{: Git, GitHub, VS Code, PyCharm} \\
+
+\textbf{Machine Learning}{: TensorFlow, Scikit-learn, Ensemble Learning (research)}
+}
+\end{itemize}
+\end{document}
