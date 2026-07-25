@@ -11,5 +11,5 @@
 *.lot
 *.blg
 *.bbl
-cv_cyber.pdf
+#cv_cyber.pdf
 .DS_Store

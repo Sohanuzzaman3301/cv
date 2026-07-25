@@ -1,0 +1,226 @@
+%-------------------------
+% IT Support/System Admin Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+
+%----------FONT OPTIONS----------
+% Using default LaTeX font
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\footskip}{12pt}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \textsc{MD SOHANUZZAMAN SHANTO}} \\
+    \vspace{6pt}
+    {\small Dhaka, Bangladesh $|$ +880 1774 786 111 $|$ \href{mailto:md.sohanuzzaman@proton.me}{\underline{md.sohanuzzaman@proton.me}} $|$ \href{https://linkedin.com/in/sohanuzzaman3301}{\underline{linkedin.com/in/sohanuzzaman3301}} $|$ \href{https://github.com/sohanuzzaman3301}{\underline{github.com/sohanuzzaman3301}}}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Professional Summary}
+\resumeSubHeadingListStart
+\resumeItem{Recent Computer Science graduate with strong Linux skills and Google IT Support Professional Certificate. Passionate about system administration and cybersecurity, with hands-on experience through personal projects, virtual labs, and security training. Seeking entry-level IT support or junior system administrator position to apply technical skills and grow professionally.}
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Wuhan Institute of Technology}{Wuhan, China}
+{Bachelor of Engineering in Computer Science and Technology}{Feb 2022 -- Jan 2026}
+\resumeItemListStart
+\resumeItem{Grade: 84\% | Awards: First Class Scholarship for Academic Excellence (Ranked 1st in batch, 2025)}
+\resumeItem{Relevant Coursework: Operating Systems, Computer Networks, Database Systems, System Programming}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small
+\item{\textbf{Operating Systems}: Linux (advanced proficiency with 9+ years personal experience), Windows, Active Directory, Kali Linux}
+\item{\textbf{Linux Administration}: User management, file systems, process management, package management, bash scripting, system hardening, log analysis}
+\item{\textbf{Virtualization \& Cloud}: QEMU/KVM, VirtualBox, VMware, Cloudflare Pages}
+\item{\textbf{Networking}: TCP/IP, DNS, DHCP, NAT, Wireshark, Nmap, Network Troubleshooting}
+\item{\textbf{Security Tools}: Wazuh, Sysmon, Zeek, Burp Suite, VirusTotal, SafeLine WAF}
+\item{\textbf{Log Analysis \& Monitoring}: Splunk (SPL), Elastic Stack (KQL), Log Analysis, System Monitoring}
+\item{\textbf{Programming \& Scripting}: Python, Bash, SQL, JavaScript}
+\item{\textbf{IT Support}: Troubleshooting, Customer Support, Technical Documentation, Incident Response}
+\end{itemize}
+
+%-----------TRAINING & CERTIFICATIONS-----------
+\section{Training \& Certifications}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{\textbf{Google IT Support Professional Certificate} $|$ \emph{Google / Coursera (\href{https://www.credly.com/badges/98cc58ec-2e39-4863-938f-b5c895a6dcb8/public_url}{\small Certificate})}}{Nov 2025}
+\resumeItemListStart
+\resumeItem{Completed comprehensive IT support training covering troubleshooting, customer service, networking, operating systems, system administration, and security.}
+\resumeItem{Gained hands-on experience with Linux command line, Windows system administration, network configuration, and IT automation.}
+\resumeItem{Developed skills in debugging, customer support best practices, and technical documentation.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Mastercard Cybersecurity Analyst Simulation} $|$ \emph{Forage (\href{https://www.theforage.com/completion-certificates/mfxGwGDp6WkQmtmTf/vcKAB5yYAgvemepGQ_mfxGwGDp6WkQmtmTf_698815166064ac3f24d2de3f_1774470032424_completion_certificate.pdf}{\small Certificate})}}{Jun 2026}
+\resumeItemListStart
+\resumeItem{Analyzed user behavior data and identified security risks affecting organizational systems.}
+\resumeItem{Developed recommendations to improve system security and user awareness.}
+\resumeItem{Created documentation for security awareness and system improvements.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Google Cybersecurity Professional Certificate} $|$ \emph{Google / Coursera (\href{https://www.credly.com/badges/ed2ab68a-c056-4cd1-a293-82a4d2422a44/public_url}{\small Certificate})}}{Sep 2025}
+\resumeItemListStart
+\resumeItem{Completed comprehensive cybersecurity training covering network security, threat intelligence, and risk management.}
+\resumeItem{Gained hands-on experience with security tools, incident response, and vulnerability assessment.}
+\resumeItem{Developed understanding of security frameworks, compliance, and best practices.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{SOC Level 1 Certificate} $|$ \emph{TryHackMe (\href{https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-NXIMKAYVCK.pdf}{\small Certificate})}}{Mar 2026}
+\resumeItemListStart
+\resumeItem{Completed hands-on SOC analyst training with real-world security scenarios.}
+\resumeItem{Gained practical experience with security monitoring, incident response, and threat detection.}
+\resumeItem{Developed skills in log analysis, security tools, and operational workflows.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------LINUX SKILLS-----------
+\section{Linux Skills \& Experience}
+\resumeSubHeadingListStart
+\resumeItem{9+ years of personal Linux experience including system administration, command-line operations, shell scripting, and troubleshooting.}
+\resumeItem{Advanced proficiency in Linux file systems, user management, process management, package management, and system configuration.}
+\resumeItem{Proficient in Bash scripting for automation and system administration tasks.}
+\resumeItem{Experience with Linux security hardening, log analysis, and system monitoring.}
+\resumeItem{Hands-on experience with virtualization technologies (QEMU/KVM, VirtualBox) for testing and development environments.}
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Technical Projects}
+    \resumeSubHeadingListStart
+\resumeProjectHeading
+          {\textbf{SafeLine WAF HomeLab} $|$ \emph{QEMU/KVM, SafeLine WAF, DVWA, Kali Linux} $|$ \href{https://github.com/Sohanuzzaman3301/safeline-waf-homelab}{\small GitHub}}{2026}
+          \resumeItemListStart
+            \resumeItem{Designed and deployed an isolated virtual lab environment using QEMU/KVM with NAT networking.}
+            \resumeItem{Configured SafeLine WAF in reverse-proxy mode to protect web applications and system resources.}
+            \resumeItem{Performed system hardening, configured security policies, and conducted log analysis for system monitoring.}
+            \resumeItem{Documented complete system topology, setup procedures, and troubleshooting guides.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Network Scanning Tools} $|$ \emph{Python, Shell} $|$ \href{https://github.com/Sohanuzzaman3301/network_scanning_tools}{\small GitHub}}{2025}
+          \resumeItemListStart
+            \resumeItem{Developed network scanning and reconnaissance tools for system administration and security analysis.}
+            \resumeItem{Implemented automated network discovery and vulnerability scanning capabilities.}
+            \resumeItem{Created scripts for network troubleshooting and system monitoring tasks.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{PowerTrack CLI} $|$ \emph{Python, Shell} $|$ \href{https://github.com/Sohanuzzaman3301/powertrack-cli}{\small GitHub}}{2026}
+          \resumeItemListStart
+            \resumeItem{Built a command-line interface tool for system monitoring and power management.}
+            \resumeItem{Automated system administration tasks using Python and shell scripting.}
+            \resumeItem{Implemented efficient data processing and reporting capabilities for system metrics.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Theme Automation} $|$ \emph{Shell Scripting} $|$ \href{https://github.com/Sohanuzzaman3301/themeing_automation}{\small GitHub}}{2026}
+          \resumeItemListStart
+            \resumeItem{Created shell scripts for automated system configuration and theme management.}
+            \resumeItem{Developed automation tools to streamline system setup and customization processes.}
+            \resumeItem{Implemented bash scripting best practices for reliable system administration tasks.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+\end{document}
