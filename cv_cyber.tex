@@ -134,7 +134,7 @@
 \begin{itemize}[leftmargin=0.15in, label={}]
 \small
 \item{\textbf{SIEM \& Log Analysis}: Security Monitoring, Threat Detection, Incident Response, Log Analysis, Malware Analysis, Network Security, Vulnerability Assessment, MITRE ATT\&CK}
-\item{\textbf{Security Tools}: Splunk (SPL), Elastic Stack (KQL), Wazuh, Sysmon, Zeek, Wireshark, Burp Suite, Nmap, PEStudio, VirusTotal}
+\item{\textbf{Security Tools}: Splunk (SPL), Elastic Stack (KQL), Wazuh, Suricata, Sysmon, Zeek, Wireshark, Burp Suite, Nmap, PEStudio, VirusTotal}
 \item{\textbf{Operating Systems}: Windows, Linux, Active Directory}
 \item{\textbf{Programming}: Python, Bash, SQL}
 \item{\textbf{Machine Learning}: Scikit-learn, TensorFlow, Ensemble Learning, SHAP}
@@ -165,6 +165,15 @@
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
+\resumeProjectHeading
+          {\textbf{SIEM Home Lab} $|$ \emph{Wazuh, Suricata, Sysmon, QEMU/KVM, Kali Linux} $|$ \href{https://github.com/Sohanuzzaman3301/SIEM_Home_Lab}{\small GitHub}}{2026}
+          \resumeItemListStart
+            \resumeItem{Built multi-VM SOC lab (Wazuh Manager on Ubuntu, Windows 10 endpoint with Sysmon, Kali attacker host) on isolated NAT network via QEMU/KVM.}
+            \resumeItem{Deployed File Integrity Monitoring across \texttt{/etc}, \texttt{/var/www/html}, and Windows system folders with real-time alerting in Wazuh dashboard.}
+            \resumeItem{Simulated attacks --- HTTP brute-force (Hydra), encoded PowerShell payloads, Nmap scanning --- and mapped detections to MITRE ATT\&CK techniques.}
+            \resumeItem{Created custom Wazuh detection rules (\texttt{local\_rules.xml}) with severity tuning; configured Suricata IDS and built dashboards for alert triage and incident investigation.}
+          \resumeItemListEnd
+
 \resumeProjectHeading
           {\textbf{SafeLine WAF HomeLab} $|$ \emph{QEMU/KVM, Safeline WAF, DVWA, Kali Linux} $|$ \href{https://github.com/Sohanuzzaman3301/safeline-waf-homelab}{\small GitHub}}{2026}
           \resumeItemListStart
