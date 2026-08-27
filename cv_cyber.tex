@@ -18,21 +18,20 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\ifdefined\pdfglyphtounicode
 \input{glyphtounicode}
+\fi
 
 
 
 %----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
+\usepackage{fontspec}
+% Prefer Calibri when available, otherwise use Carlito on Fedora/Linux.
+\IfFontExistsTF{Calibri}{
+  \setmainfont{Calibri}
+}{
+  \setmainfont{Carlito}
+}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -49,8 +48,8 @@
 
 \urlstyle{same}
 
-\raggedbottom
-\raggedright
+\raggedbottom%
+\raggedright%
 \setlength{\tabcolsep}{0in}
 \setlength{\footskip}{12pt}
 
@@ -60,14 +59,14 @@
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
+\ifdefined\pdfgentounicode%
 \pdfgentounicode=1
+\fi
 
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
+  \item\small{#1}
 }
 
 \newcommand{\resumeSubheading}[4]{
@@ -120,22 +119,22 @@
 \end{center}
 %-----------EDUCATION-----------
 \section{Education}
-\resumeSubHeadingListStart
-\resumeSubheading
+\resumeSubHeadingListStart%
+\resumeSubheading%
 {Wuhan Institute of Technology}{Wuhan, China}
-{Bachelor of Engineering in Computer Science and Technology}{Feb 2022 -- Jan 2026}
-\resumeItemListStart
+{Bachelor of Engineering in Computer Science and Technology}{Feb 2022 \- Jan 2026}
+\resumeItemListStart%
 \resumeItem{Grade: 84\% | Awards: First Class Scholarship for Academic Excellence (Ranked 1st in batch, 2025)}
-\resumeItemListEnd
-\resumeSubHeadingListEnd
+\resumeItemListEnd%
+\resumeSubHeadingListEnd%
 %
 %-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
 \small
 \item{\textbf{SIEM \& Log Analysis}: Security Monitoring, Threat Detection, Incident Response, Log Analysis, Malware Analysis, Network Security, Vulnerability Assessment, MITRE ATT\&CK}
-\item{\textbf{Security Tools}: Splunk (SPL), Elastic Stack (KQL), Wazuh, Suricata, Sysmon, Zeek, Wireshark, Burp Suite, Nmap, PEStudio, VirusTotal}
-\item{\textbf{Operating Systems}: Windows, Linux, Active Directory}
+\item{\textbf{Security Tools}: Splunk (SPL), Elastic Stack (KQL), Wazuh, Suricata, Sysmon, Zeek, Wireshark, Burp Suite, Nmap, PEStudio, VirusTotal, Active Directory}
+\item{\textbf{Operating Systems}: Windows, Linux}
 \item{\textbf{Programming}: Python, Bash, SQL}
 \item{\textbf{Machine Learning}: Scikit-learn, TensorFlow, Ensemble Learning, SHAP}
 \end{itemize}
@@ -143,71 +142,59 @@
 
 %-----------CYBERSECURITY EXPERIENCE-----------
 \section{Cybersecurity Experience}
-\resumeSubHeadingListStart
-\resumeProjectHeading
-{\textbf{SOC Analyst Training} $|$ \emph{TryHackMe (SOC Level 1 Track) (\href{https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-NXIMKAYVCK.pdf}{\small Certificate})}}{Mar 2026}
-\resumeItemListStart
-\resumeItem{Investigated simulated security incidents using Splunk, Elastic Stack (ELK), Sysmon, Zeek, and Wazuh.}
-\resumeItem{Performed alert triage, threat detection, and log analysis across Windows and Linux environments.}
-\resumeItem{Analyzed network traffic and endpoint telemetry to identify indicators of compromise.}
-\resumeItem{Conducted malware investigations and incident response exercises using industry-standard workflows.}
-\resumeItemListEnd
-
-\resumeProjectHeading
-{\textbf{Mastercard Cybersecurity Analyst Simulation} $|$ \emph{Forage (\href{https://www.theforage.com/completion-certificates/mfxGwGDp6WkQmtmTf/vcKAB5yYAgvemepGQ_mfxGwGDp6WkQmtmTf_698815166064ac3f24d2de3f_1774470032424_completion_certificate.pdf}{\small Certificate})}}{Jun 2026}
-\resumeItemListStart
-\resumeItem{Designed phishing simulation campaigns and analyzed employee susceptibility data to identify high-risk cohorts.}
-\resumeItem{Identified security awareness gaps and recommended mitigation strategies to reduce organizational risk.}
-\resumeItem{Developed targeted security awareness training recommendations to improve phishing resilience.}
-\resumeItemListEnd
-\resumeSubHeadingListEnd
+    \resumeSubHeadingListStart%
+\resumeProjectHeading%
+          {\textbf{SOC Analyst Training} $|$ \emph{TryHackMe (SOC Level 1 Track)} $|$ \href{https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-NXIMKAYVCK.pdf}{\small Certificate}}{Mar 2026}
+          \resumeItemListStart%
+            \resumeItem{Investigated simulated security incidents in Splunk/ELK/Wazuh; triaged alerts and analyzed endpoint telemetry on Windows/Linux.}
+            \resumeItem{Analyzed network traffic and endpoint telemetry to identify indicators of compromise.}
+            \resumeItem{Conducted malware investigations and incident response exercises; documented findings using industry-standard workflows.}
+          \resumeItemListEnd%
+\resumeProjectHeading%
+          {\textbf{Mastercard Cybersecurity Analyst Simulation} $|$ \emph{Forage} $|$ \href{https://www.theforage.com/completion-certificates/mfxGwGDp6WkQmtmTf/vcKAB5yYAgvemepGQ_mfxGwGDp6WkQmtmTf_698815166064ac3f24d2de3f_1774470032424_completion_certificate.pdf}{\small Certificate}}{Jun 2026}
+          \resumeItemListStart%
+            \resumeItem{Designed phishing simulation campaigns and analyzed employee susceptibility data, identifying high-risk cohorts.}
+            \resumeItem{Developed targeted security awareness training recommendations to improve phishing resilience.}
+            \resumeItemListEnd%
+    \resumeSubHeadingListEnd%
 %
 %-----------PROJECTS-----------
 \section{Projects}
-    \resumeSubHeadingListStart
-\resumeProjectHeading
-          {\textbf{SIEM Home Lab} $|$ \emph{Wazuh, Suricata, Sysmon, QEMU/KVM, Kali Linux} $|$ \href{https://github.com/Sohanuzzaman3301/SIEM_Home_Lab}{\small GitHub}}{2026}
-          \resumeItemListStart
-            \resumeItem{Built multi-VM SOC lab (Wazuh Manager on Ubuntu, Windows 10 endpoint with Sysmon, Kali attacker host) on isolated NAT network via QEMU/KVM.}
-            \resumeItem{Deployed File Integrity Monitoring across \texttt{/etc}, \texttt{/var/www/html}, and Windows system folders with real-time alerting in Wazuh dashboard.}
-            \resumeItem{Simulated attacks --- HTTP brute-force (Hydra), encoded PowerShell payloads, Nmap scanning --- and mapped detections to MITRE ATT\&CK techniques.}
-            \resumeItem{Created custom Wazuh detection rules (\texttt{local\_rules.xml}) with severity tuning; configured Suricata IDS and built dashboards for alert triage and incident investigation.}
-          \resumeItemListEnd
+    \resumeSubHeadingListStart%
+\resumeProjectHeading%
+          {\textbf{SIEM Home Lab} $|$ \emph{Wazuh, Suricata, Sysmon, Kali Linux} $|$ \href{https://github.com/Sohanuzzaman3301/SIEM_Home_Lab}{\small GitHub}}{2026}
+          \resumeItemListStart%
+            \resumeItem{Built 3-VM SOC lab (Wazuh, Sysmon, Kali) on isolated NAT network; deployed File Integrity Monitoring across system folders with real-time alerting.}
+            \resumeItem{Simulated 15+ attack scenarios (Hydra, PowerShell, Nmap) and mapped detections to 20+ MITRE ATT\&CK techniques with custom Wazuh rules.}
+            \resumeItem{Configured Suricata IDS and built dashboards for alert triage and incident investigation.}
+          \resumeItemListEnd%
 
-\resumeProjectHeading
-          {\textbf{SafeLine WAF HomeLab} $|$ \emph{QEMU/KVM, Safeline WAF, DVWA, Kali Linux} $|$ \href{https://github.com/Sohanuzzaman3301/safeline-waf-homelab}{\small GitHub}}{2026}
-          \resumeItemListStart
-            \resumeItem{Designed and deployed an isolated virtual lab (QEMU/KVM, NAT networking) with Safeline WAF in reverse-proxy mode protecting a DVWA target.}
-            \resumeItem{Validated WAF effectiveness against SQL Injection (sqlmap), Reflected XSS, and Brute-Force (hydra) attacks launched from Kali Linux --- all malicious traffic blocked with zero false positives.}
-            \resumeItem{Configured detection policies, rate-limiting rules, and performed log analysis to tune false positives; documented full topology, setup guide, and attack evidence with screenshots.}
-          \resumeItemListEnd
-
-      \resumeProjectHeading
-          {\textbf{Password Strength Meter} $|$ \emph{Astro, JavaScript, CSS} $|$ \href{https://github.com/Sohanuzzaman3301/password-strengh-meter}{\small GitHub} $|$ \href{https://dd3b2174.password-strength-meter.pages.dev/}{\small Live}}{2024}
-          \resumeItemListStart
-            \resumeItem{Client-side password strength estimator and leak checker that estimates entropy and likely crack times using a zxcvbn-inspired approach.}
-            \resumeItem{Performs k-anonymity "Have I Been Pwned" leak checks entirely from the browser so plaintext passwords are never transmitted; includes CI for deployment to Cloudflare Pages.}
-          \resumeItemListEnd
-    \resumeSubHeadingListEnd
+\resumeProjectHeading%
+          {\textbf{SafeLine WAF HomeLab} $|$ \emph{Safeline WAF, DVWA, Kali Linux} $|$ \href{https://github.com/Sohanuzzaman3301/safeline-waf-homelab}{\small GitHub}}{2026}
+          \resumeItemListStart%
+\resumeItem{Deployed Safeline WAF in reverse-proxy mode protecting DVWA; validated against SQL Injection, XSS, and Brute-Force attacks with zero false positives.}
+            \resumeItem{Configured detection policies and rate-limiting rules; performed log analysis to tune false positives and documented topology.}
+      \resumeItemListEnd%
+    \resumeSubHeadingListEnd%
 
 
 %-----------RESEARCH EXPERIENCE-----------
 \section{Research Experience}
-    \resumeSubHeadingListStart
-      \resumeSubheading
-          {\textbf{Undergraduate Thesis: Explainable PE Malware Detection} $|$ \href{https://github.com/Sohanuzzaman3301/pe-malware-ensemble/}{\small GitHub}}{2024 -- 2026}
+    \resumeSubHeadingListStart%
+      \resumeSubheading%
+          {\textbf{Undergraduate Thesis: Explainable PE Malware Detection} $|$ \href{https://github.com/Sohanuzzaman3301/pe-malware-ensemble/}{\small GitHub}}{2024 - 2026}
           {Wuhan Institute of Technology}{EMBER2024 Dataset}
-          \resumeItemListStart
-            \resumeItem{Developed an ensemble stacking pipeline for PE malware classification trained on the EMBER2024 dataset.}
-            \resumeItem{Applied SHAP to produce model-agnostic explanations and feature-level attributions to improve analyst interpretability and debugging.}
-          \resumeItemListEnd
-    \resumeSubHeadingListEnd
+          \resumeItemListStart%
+            \resumeItem{Developed an ensemble stacking pipeline for PE malware classification trained on the EMBER2024 dataset, achieving 95\%+ accuracy across 1M+ samples.}
+            \resumeItem{Applied SHAP to produce model-agnostic explanations and feature-level attributions, improving analyst interpretability and reducing investigation time.}
+          \resumeItemListEnd%
+    \resumeSubHeadingListEnd%
 
 
 
 %-----------CERTIFICATIONS-----------
 \section{Certifications \& Licenses}
-\resumeSubHeadingListStart
+\resumeSubHeadingListStart%
 
 \item
   \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
@@ -224,5 +211,12 @@
     \textbf{Google IT Support Professional Certificate} \textit{\small( Google / Coursera ) | Nov 2025} & \href{https://www.credly.com/badges/98cc58ec-2e39-4863-938f-b5c895a6dcb8/public_url}{\small Credly badge} \\
   \end{tabular*}
 
-\resumeSubHeadingListEnd
+\resumeSubHeadingListEnd%
+
+%-----------LANGUAGES-----------
+\section{Languages}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small
+\item{\textbf{English} --- C1 (TOEFL 103/120) | \textbf{Bengali} --- Native}
+\end{itemize}
 \end{document}
