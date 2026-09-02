@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+# make_cv_pdf - compile CV tex to pdf using XeLaTeX
+# Usage: ./make_cv_pdf file.tex  OR  ./make_cv_pdf file (without .tex)
+set -e
+
+if [ $# -eq 0 ]; then
+  echo "Usage: $0 <file.tex>"
+  echo "  e.g. $0 sohanuzzaman_N_B.tex"
+  echo "       $0 sohanuzzaman_TS_B.tex"
+  exit 1
+fi
+
+INPUT="$1"
+
+# add .tex if missing
+if [[ "$INPUT" != *.tex ]]; then
+  INPUT="${INPUT}.tex"
+fi
+
+if [ ! -f "$INPUT" ]; then
+  echo "Error: file not found: $INPUT"
+  exit 1
+fi
+
+BASENAME="${INPUT%.tex}"
+
+echo "Compiling $INPUT with XeLaTeX..."
+
+# requires fontspec -> must use xelatex (not pdflatex)
+xelatex -interaction=nonstopmode -halt-on-error "$INPUT"
+
+# second pass for hyperlinks/outlines (optional but cheap)
+xelatex -interaction=nonstopmode -halt-on-error "$INPUT" > /dev/null
+
+if [ -f "${BASENAME}.pdf" ]; then
+  echo "Done: ${BASENAME}.pdf"
+  ls -lh "${BASENAME}.pdf"
+  rm -f "${BASENAME}.aux" "${BASENAME}.out" "${BASENAME}.log"
+  echo "Cleaned: ${BASENAME}.aux/.out/.log"
+else
+  echo "Failed: PDF not created"
+  exit 1
+fi
