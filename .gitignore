@@ -1,3 +1,6 @@
+.agents/
+.claude/
+skills-lock.json
 *.aux
 *.log
 *.out
