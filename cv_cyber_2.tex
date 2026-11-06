@@ -1,0 +1,236 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\ifdefined\pdfglyphtounicode
+\input{glyphtounicode}
+\fi
+
+
+
+%----------FONT OPTIONS----------
+\usepackage{fontspec}
+% Prefer Calibri when available, otherwise use Carlito on Fedora/Linux.
+\IfFontExistsTF{Calibri}{
+  \setmainfont{Calibri}
+}{
+  \setmainfont{Carlito}
+}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom%
+\raggedright%
+\setlength{\tabcolsep}{0in}
+\setlength{\footskip}{12pt}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\ifdefined\pdfgentounicode%
+\pdfgentounicode=1
+\fi
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{#1}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    {\Huge \textsc{MD SOHANUZZAMAN SHANTO}} \\
+    \vspace{6pt}
+    {\small Rajshahi, Bangladesh $|$ +880 1774 786 111 $|$ \href{mailto:md.sohanuzzaman@proton.me}{\underline{md.sohanuzzaman@proton.me}} $|$ \href{https://linkedin.com/in/sohanuzzaman3301}{\underline{LinkedIn}} $|$ \href{https://github.com/sohanuzzaman3301}{\underline{GitHub}} $|$ \href{https://sohanuzzaman3301.github.io}{\underline{Portfolio}} $|$ \href{https://tryhackme.com/p/HiddenV1rus}{\underline{TryHackMe}}}
+\end{center}
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart%
+\resumeSubheading%
+{Wuhan Institute of Technology}{Wuhan, China}
+{Bachelor of Engineering in Computer Science and Technology}{Feb 2022 \- Jan 2026}
+\resumeItemListStart%
+\resumeItem{Grade: 84\% | Awards: First Class Scholarship for Academic Excellence (Ranked 1st in batch, 2025)}
+\resumeItemListEnd%
+\resumeSubHeadingListEnd%
+%
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart%
+\resumeSubheading%
+{Security Operations Center Analyst}{Dhaka, Bangladesh}
+{Smartdata Technologies Limited}{Oct 2026 \- Present}
+\resumeItemListStart%
+\resumeItem{Deployed Stellar Cyber Open XDR for customer environments; integrated telemetry and tuned detections to improve threat visibility and alert fidelity.}
+\resumeItem{Installed and configured Paraqum bandwidth shaper at Rupali Bank, implementing traffic policing and QoS policies to control utilization and prioritize business-critical flows.}
+\resumeItem{Monitored and triaged security alerts across SIEM and XDR platforms; investigated incidents, documented findings, and escalated per response playbooks.}
+\resumeItem{Documented deployment procedures, network topology, and configuration baselines for handover and operational support.}
+\resumeItemListEnd%
+\resumeSubHeadingListEnd%
+%
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small
+\item{\textbf{SIEM \& Log Analysis}: Security Monitoring, Threat Detection, Incident Response, Log Analysis, Malware Analysis, Network Security, Vulnerability Assessment, MITRE ATT\&CK}
+\item{\textbf{Security Tools}: Stellar Cyber Open XDR, Paraqum Bandwidth Shaper, Splunk (SPL), Elastic Stack (KQL), Wazuh, Suricata, Sysmon, Zeek, Wireshark, Burp Suite, Nmap, PEStudio, VirusTotal, Active Directory}
+\item{\textbf{Operating Systems}: Windows, Linux}
+\item{\textbf{Programming}: Python, Bash, SQL}
+\item{\textbf{Machine Learning}: Scikit-learn, TensorFlow, Ensemble Learning, SHAP}
+\end{itemize}
+%
+
+%-----------VIRTUAL INTERNSHIPS & TRAINING-----------
+\section{Virtual Internships \& Training}
+    \resumeSubHeadingListStart%
+\resumeProjectHeading%
+          {\textbf{SOC Analyst Training} $|$ \emph{TryHackMe (SOC Level 1 Track)} $|$ \href{https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-NXIMKAYVCK.pdf}{\small Certificate}}{Mar 2026}
+          \resumeItemListStart%
+            \resumeItem{Investigated simulated security incidents in Splunk/ELK/Wazuh; triaged alerts and analyzed endpoint telemetry on Windows/Linux.}
+            \resumeItem{Analyzed network traffic and endpoint telemetry to identify indicators of compromise.}
+            \resumeItem{Conducted malware investigations and incident response exercises; documented findings using industry-standard workflows.}
+          \resumeItemListEnd%
+\resumeProjectHeading%
+          {\textbf{Mastercard Cybersecurity Analyst Simulation} $|$ \emph{Forage} $|$ \href{https://www.theforage.com/completion-certificates/mfxGwGDp6WkQmtmTf/vcKAB5yYAgvemepGQ_mfxGwGDp6WkQmtmTf_698815166064ac3f24d2de3f_1774470032424_completion_certificate.pdf}{\small Certificate}}{Jun 2026}
+          \resumeItemListStart%
+            \resumeItem{Designed phishing simulation campaigns and analyzed employee susceptibility data, identifying high-risk cohorts.}
+            \resumeItem{Developed targeted security awareness training recommendations to improve phishing resilience.}
+          \resumeItemListEnd%
+    \resumeSubHeadingListEnd%
+%
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart%
+\resumeProjectHeading%
+          {\textbf{SIEM Home Lab} $|$ \emph{Wazuh, Suricata, Sysmon, Kali Linux} $|$ \href{https://github.com/Sohanuzzaman3301/SIEM_Home_Lab}{\small GitHub}}{2026}
+          \resumeItemListStart%
+            \resumeItem{Built 3-VM SOC lab (Wazuh, Sysmon, Kali) on isolated NAT network; deployed File Integrity Monitoring across system folders with real-time alerting.}
+            \resumeItem{Simulated 15+ attack scenarios (Hydra, PowerShell, Nmap) and mapped detections to 20+ MITRE ATT\&CK techniques with custom Wazuh rules.}
+            \resumeItem{Configured Suricata IDS and built dashboards for alert triage and incident investigation.}
+          \resumeItemListEnd%
+
+\resumeProjectHeading%
+          {\textbf{SafeLine WAF HomeLab} $|$ \emph{Safeline WAF, DVWA, Kali Linux} $|$ \href{https://github.com/Sohanuzzaman3301/safeline-waf-homelab}{\small GitHub}}{2026}
+          \resumeItemListStart%
+\resumeItem{Deployed Safeline WAF in reverse-proxy mode protecting DVWA; validated against SQL Injection, XSS, and Brute-Force attacks with zero false positives.}
+            \resumeItem{Configured detection policies and rate-limiting rules; performed log analysis to tune false positives and documented topology.}
+      \resumeItemListEnd%
+    \resumeSubHeadingListEnd%
+
+
+%-----------RESEARCH EXPERIENCE-----------
+\section{Research Experience}
+    \resumeSubHeadingListStart%
+      \resumeSubheading%
+          {\textbf{Undergraduate Thesis: Explainable PE Malware Detection} $|$ \href{https://github.com/Sohanuzzaman3301/pe-malware-ensemble/}{\small GitHub}}{2024 - 2026}
+          {Wuhan Institute of Technology}{EMBER2024 Dataset}
+          \resumeItemListStart%
+            \resumeItem{Developed an ensemble stacking pipeline for PE malware classification trained on the EMBER2024 dataset, achieving 95\%+ accuracy across 1M+ samples.}
+            \resumeItem{Applied SHAP to produce model-agnostic explanations and feature-level attributions, improving analyst interpretability and reducing investigation time.}
+          \resumeItemListEnd%
+    \resumeSubHeadingListEnd%
+
+
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications \& Licenses}
+\resumeSubHeadingListStart%
+
+\item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{SOC Level 1 Certificate} \textit{\small( TryHackMe ) | Mar 2026} & \href{https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-NXIMKAYVCK.pdf}{\small Verify} \\
+  \end{tabular*}
+
+\item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{Google Cybersecurity Professional Certificate} \textit{\small( Google / Coursera ) | Sep 2025} & \href{https://www.credly.com/badges/ed2ab68a-c056-4cd1-a293-82a4d2422a44/public_url}{\small Credly badge} \\
+  \end{tabular*}
+
+\item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{Google IT Support Professional Certificate} \textit{\small( Google / Coursera ) | Nov 2025} & \href{https://www.credly.com/badges/98cc58ec-2e39-4863-938f-b5c895a6dcb8/public_url}{\small Credly badge} \\
+  \end{tabular*}
+
+\resumeSubHeadingListEnd%
+
+%-----------LANGUAGES-----------
+\section{Languages}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small
+\item{\textbf{English} --- C1 (TOEFL 103/120) | \textbf{Bengali} --- Native}
+\end{itemize}
+\end{document}
